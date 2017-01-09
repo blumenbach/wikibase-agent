@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "local.js",
+  "sourceRoot": "..",
+  "sources": [
+    "config/local.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;EAAA,MAAM,CAAC,OAAP,GACE;IAAA,QAAA,EACE;MAAA,QAAA,EAAU,aAAV;MACA,QAAA,EAAU,UADV;KADF;;AADF"
+}

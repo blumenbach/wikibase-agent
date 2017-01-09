@@ -2,10 +2,11 @@ module.exports =
   host: '0.0.0.0'
   port: 4115
   wikidata:
-    base: "https://www.wikidata.org/w/api.php"
+    base: "http://w.b-ol.de/w/api.php"
     username: 'customize'
     password: 'customize'
   whitelistedProperties:
+    P14: 'claim',
     P31: 'claim' #instance of
     P50: 'claim' #author
     P101: 'claim' #field of work

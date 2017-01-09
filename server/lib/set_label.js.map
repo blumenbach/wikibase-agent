@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "set_label.js",
+  "sourceRoot": "../..",
+  "sources": [
+    "server/lib/set_label.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA;;EAAE,OAAS,OAAA,CAAQ,WAAR;;EACX,CAAA,GAAI,OAAA,CAAQ,SAAR;;EAEJ,MAAM,CAAC,OAAP,GAAiB,SAAC,MAAD,EAAS,QAAT,EAAmB,KAAnB;WACf,IAAA,CAAK,YAAL,EACE;MAAA,EAAA,EAAI,MAAJ;MACA,QAAA,EAAU,QADV;MAEA,KAAA,EAAO,KAFP;MAGA,MAAA,EAAQ,MAHR;KADF,CAKA,CAAC,IALD,CAKM,CAAC,CAAC,GAAF,CAAM,iBAAN,CALN;EADe;AAHjB"
+}

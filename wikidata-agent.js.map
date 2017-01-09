@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "wikidata-agent.js",
+  "sourceRoot": "",
+  "sources": [
+    "wikidata-agent.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA;;EAAA,MAAA,GAAS,OAAA,CAAQ,QAAR;;EACT,SAAA,GAAY,OAAA,CAAQ,WAAR;;EAEZ,SAAS,CAAC,KAAV,CACE;IAAA,IAAA,EAAM,gBAAN;IACA,IAAA,EAAM,MAAM,CAAC,IADb;IAEA,IAAA,EAAM,MAAM,CAAC,IAFb;GADF;AAHA"
+}

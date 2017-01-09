@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "user_agent.js",
+  "sourceRoot": "../..",
+  "sources": [
+    "server/lib/user_agent.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA;;EAAA,EAAA,GAAK,OAAA,CAAQ,IAAR;;EACL,WAAA,GAAc,EAAE,CAAC,YAAH,CAAgB,gBAAhB,EAAkC,OAAlC;;EACZ,UAAY,IAAI,CAAC,KAAL,CAAW,WAAX;;EAEd,SAAA,GAAY,iBAAA,GAAkB,OAAlB,GAA0B;;EACtC,OAAO,CAAC,GAAR,CAAY,aAAZ,EAA2B,SAAS,CAAC,KAArC;;EAEA,MAAM,CAAC,OAAP,GAAiB;AAPjB"
+}

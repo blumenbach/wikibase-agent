@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "reload.js",
+  "sourceRoot": "",
+  "sources": [
+    "reload.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;;AAAA"
+}
