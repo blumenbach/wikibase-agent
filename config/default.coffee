@@ -7,6 +7,7 @@ module.exports =
     password: 'customize'
   whitelistedProperties:
     P14: 'claim',
+    P28: 'string',
     P31: 'claim' #instance of
     P50: 'claim' #author
     P101: 'claim' #field of work

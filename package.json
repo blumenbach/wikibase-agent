@@ -21,6 +21,7 @@
     "lodash": "^4.5.1",
     "prompt": "^1.0.0",
     "request": "^2.69.0",
+    "request-promise": "latest",
     "wikidata-sdk": "^2.3.0",
     "wikidata-token": "^1.0.5",
     "fs": "latest"

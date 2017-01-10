@@ -1,37 +1,35 @@
+"use strict";
 
-const request = require('request');
+const request = require('request-promise');
 const fs = require('fs');
 
 const url = {
-    url: 'http://localhost:4115/entity'
+    url: 'http://localhost:4115/entity',
+    json: true
 };
 
-var data = JSON.parse(fs.readFileSync('/tmp/kerndaten-norm.json', 'utf8'));
+const data = JSON.parse(fs.readFileSync('/tmp/labels-ids.json', 'utf8'));
 
-const body = {
-    json: true,
-    body: {
-        labels: {
-            en: 'Sample2'
-        },
-        descriptions: {
-            en: 'a sample'
-        },
-        claims: {
-            P14: 'Q20'
-        },
-        summary: 'importing data from blablabla'
-    }
+const fn = function (item) {
+
+    const hash = hashCode(JSON.stringify(item.body));
+    const key = {
+        key: hash
+    };
+    const summary = {
+        summary: "importing data from mySQL (2016-11-04)"
+    };
+    extend(item.body, key);
+    extend(item.body, summary);
+    const opts = extend(url, item);
+
+    return request.post(opts);
 };
 
-const hash = hashCode(JSON.stringify(body));
-const key = {
-    key: hash
-};
-extend(body.body, key);
-const opts = extend(url, body);
+const actions = data.root.item.map(fn);
+const results = Promise.all(actions);
 
-request.post(opts);
+results.then(data => console.log(data));
 
 function extend(a, b){
     for(var key in b)
@@ -44,6 +42,7 @@ function hashCode(str) {
     return str.split('').reduce((prevHash, currVal) =>
     ((prevHash << 5) - prevHash) + currVal.charCodeAt(0), 0);
 }
+
 
 
 
