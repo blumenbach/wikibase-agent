@@ -4,29 +4,19 @@ const request = require('request-promise');
 const fs = require('fs');
 
 const url = {
-    url: 'http://localhost:4115/entity',
+    url: 'http://localhost:4115/claim',
     json: true
 };
 
-const data = JSON.parse(fs.readFileSync('/tmp/persons.json', 'utf8'));
+const data = JSON.parse(fs.readFileSync('/tmp/adddonatorQID.json', 'utf8'));
 
 const fn = function (item) {
-
-    const hash = hashCode(JSON.stringify(item.body));
-    const key = {
-        key: hash
-    };
-    const summary = {
-        summary: "importing data from mySQL (2017-1-11)"
-    };
-    extend(item.body, key);
-    extend(item.body, summary);
     const opts = extend(url, item);
 
     return request.post(opts);
 };
 
-const actions = data.root.item.map(fn);
+const actions = data.DATA.item.map(fn);
 const results = Promise.all(actions);
 
 results.then(data => console.log(data));
@@ -42,7 +32,3 @@ function hashCode(str) {
     return str.split('').reduce((prevHash, currVal) =>
     ((prevHash << 5) - prevHash) + currVal.charCodeAt(0), 0);
 }
-
-
-
-
